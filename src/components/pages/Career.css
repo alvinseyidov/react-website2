@@ -1,0 +1,1648 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500|Roboto:400,700,500');
+
+* {
+
+box-sizing: border-box;
+}
+.align-self-flex-center {
+
+align-self: flex-center;
+}
+.align-self-flex-end {
+
+align-self: flex-end;
+}
+.align-self-flex-start {
+
+align-self: flex-start;
+}
+.animate-nodelay {
+
+animation-delay: 0s;
+}
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+
+opacity: 1;
+}
+.auto-animated div {
+
+opacity: 0;
+position: absolute;
+--z-index: -1;
+}
+.component-wrapper * {
+
+box-sizing: border-box;
+-webkit-font-smoothing: antialiased;
+pointer-events: none
+}
+.component-wrapper a {
+
+text-decoration: none;
+display: contents;
+pointer-events: auto
+}
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+
+pointer-events: auto;
+}
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+
+visibility: hidden !important;
+}
+.container-center-horizontal {
+
+pointer-events: none;
+display: flex;
+flex-direction: row;
+justify-content: center;
+width: 100%;
+}
+.container-center-horizontal > * {
+
+pointer-events: auto;
+flex-shrink: 0;
+}
+.container-center-vertical {
+
+pointer-events: none;
+display: flex;
+flex-direction: row;
+align-items: center;
+height: 100%;
+}
+.container-center-vertical > * {
+
+pointer-events: auto;
+flex-shrink: 0;
+}
+.full-height-a {
+
+height: 100%;
+}
+.full-width-a {
+
+width: 100%;
+}
+.hidden,
+.hidden * {
+
+visibility: hidden;
+pointer-events: none;
+}
+.listeners-active,
+.listeners-active * {
+
+pointer-events: auto;
+}
+.listeners-active-click,
+.listeners-active-click * {
+
+cursor: pointer;
+}
+.overlay {
+
+position: absolute;
+opacity: 0;
+display: none;
+top: 0;
+width: 100%;
+height: 100%;
+position: fixed;
+}
+.overlay.animate-appear {
+
+opacity: 0;
+display: block;
+animation: reveal 0.3s ease-in-out 1 normal forwards;
+}
+.overlay.animate-disappear {
+
+opacity: 1;
+display: block;
+animation: reveal 0.3s ease-in-out 1 reverse forwards;
+}
+.screen a {
+
+text-decoration: none;
+display: contents;
+}
+.smart-layers-pointers,
+.smart-layers-pointers * {
+
+pointer-events: auto;
+visibility: visible;
+}
+.valign-text-bottom {
+
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+}
+.valign-text-middle {
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+@keyframes reveal {
+
+from {
+opacity: 0;
+}
+to {
+opacity: 1;
+}
+}
+input:focus {
+
+outline: none;
+}
+
+:root {
+  --black: #000000;
+  --celeste: #cdcdcf;
+  --eerie-black: #221e1e;
+  --fern: #53ba65;
+  --mystic: #e1eff6;
+  --silver-chalice: #a7a9ac;
+  --sonic-silver: #777777;
+  --white: #ffffff;
+  --white-lilac: #f6f9fb;
+
+  --font-size-l: 17px;
+  --font-size-m: 16px;
+  --font-size-s: 14px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 32px;
+  --font-size-xxxl: 40px;
+  --font-size-xxxxl: 100px;
+
+  --font-family-montserrat: "Montserrat", Helvetica;
+  --font-family-roboto: "Roboto", Helvetica;
+}
+.montserrat-medium-white-17px {
+  color: var(--white);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 500;
+}
+.montserrat-medium-black-17px {
+  color: var(--black);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 500;
+}
+.roboto-medium-white-16px {
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+}
+.roboto-normal-eerie-black-16px {
+  color: var(--eerie-black);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-medium-black-14px {
+  color: var(--black);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 500;
+}
+.roboto-medium-eerie-black-16px {
+  color: var(--eerie-black);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+}
+.roboto-normal-white-14px {
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-medium-celeste-12px {
+  color: var(--celeste);
+  font-family: var(--font-family-montserrat);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+}
+.roboto-medium-fern-100px {
+  color: var(--fern);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xxxxl);
+  font-style: normal;
+  font-weight: 500;
+}
+.roboto-medium-fern-18px {
+  color: var(--fern);
+  font-family: var(--font-family-roboto);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+}
+.roboto-normal-eerie-black-17px {
+  color: var(--eerie-black);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-medium-silver-chalice-13px {
+  color: var(--silver-chalice);
+  font-family: var(--font-family-montserrat);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+}
+.roboto-bold-eerie-black-100px {
+  color: var(--eerie-black);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xxxxl);
+  font-style: normal;
+  font-weight: 700;
+}
+.roboto-medium-eerie-black-24px {
+  color: var(--eerie-black);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 500;
+}
+.roboto-medium-eerie-black-40px {
+  color: var(--eerie-black);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 500;
+}
+.montserrat-medium-black-18px {
+  color: var(--black);
+  font-family: var(--font-family-montserrat);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+}
+.roboto-medium-white-149px {
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: 149px;
+  font-style: normal;
+  font-weight: 500;
+}
+.roboto-normal-white-40px {
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 400;
+}
+.roboto-medium-eerie-black-32px {
+  color: var(--eerie-black);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 500;
+}
+.montserrat-medium-celeste-18px {
+  color: var(--celeste);
+  font-family: var(--font-family-montserrat);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+}
+.roboto-normal-white-17px {
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}
+.border-1px-sonic-silver {
+  border: 1px solid var(--sonic-silver);
+}
+
+/* screen - submit-cv */
+
+.submit-cv {
+  align-items: flex-start;
+  background-color: var(--white);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 2402px;
+  justify-content: flex-start;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  overflow-x: hidden;
+  padding: 30px 0;
+  position: relative;
+  width: 1800px;
+}
+.submit-cv .about-us-RrLOcj {
+  background-color: transparent;
+  cursor: pointer;
+  flex-shrink: 1;
+  height: 21px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-left: 39px;
+  min-height: 21px;
+  min-width: 80px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+.submit-cv .about-us-jmizPO {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 21px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-left: 39px;
+  min-height: 21px;
+  min-width: 80px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+.submit-cv .are-you-looking-ties-that-arise-4eduM0 {
+  background-color: transparent;
+  height: auto;
+  left: 188px;
+  letter-spacing: 0.32px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 383px;
+  width: 574px;
+}
+.submit-cv .attach-4eduM0 {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: flex-start;
+  left: 925px;
+  min-height: 108px;
+  position: absolute;
+  top: 1261px;
+  width: 606px;
+}
+.submit-cv .birthday-4eduM0 {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: flex-start;
+  left: 275px;
+  min-height: 109px;
+  position: absolute;
+  top: 1260px;
+  width: 603px;
+}
+.submit-cv .check-4eduM0 {
+  background-color: var(--white);
+  border-radius: 5px;
+  height: 25px;
+  left: 275px;
+  mix-blend-mode: normal;
+  opacity: 0.3;
+  position: absolute;
+  top: 1483px;
+  width: 25px;
+}
+.submit-cv .clients-jmizPO {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 21px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-left: 39px;
+  min-height: 21px;
+  min-width: 62px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+.submit-cv .contacts-RrLOcj {
+  background-color: transparent;
+  cursor: pointer;
+  flex-shrink: 1;
+  height: 21px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-left: 39px;
+  min-height: 21px;
+  min-width: 79px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+.submit-cv .contacts-jmizPO {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 21px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-left: 39px;
+  min-height: 21px;
+  min-width: 79px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+.submit-cv .date-hNeJVI {
+  background-color: transparent;
+  height: 22px;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 29px;
+  width: 47px;
+}
+.submit-cv .date-l2XF6o {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 80px;
+  margin-left: 21px;
+  position: relative;
+  width: 112px;
+}
+.submit-cv .date-of-birth-j60mBE {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 22px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-left: 26px;
+  min-height: 22px;
+  min-width: 127px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 127px;
+}
+.submit-cv .down-I5xRX4 {
+  background-color: transparent;
+  height: 7px;
+  left: 168px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 37px;
+  width: 13px;
+}
+.submit-cv .down-IoEOg6 {
+  background-color: transparent;
+  height: 7px;
+  left: 233px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 37px;
+  width: 13px;
+}
+.submit-cv .down-hNeJVI {
+  background-color: transparent;
+  height: 7px;
+  left: 87px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 36px;
+  width: 13px;
+}
+.submit-cv .email-4eduM0 {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: flex-start;
+  left: 925px;
+  min-height: 108px;
+  position: absolute;
+  top: 1116px;
+  width: 604px;
+}
+.submit-cv .email-xkKkOl {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 22px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  min-height: 22px;
+  min-width: 95px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 95px;
+}
+.submit-cv .facebook-tybepC {
+  background-color: transparent;
+  height: 32px;
+  left: 348px;
+  position: absolute;
+  top: 184px;
+  width: 32px;
+}
+.submit-cv .fill-in-the-fie-confidentiality-4eduM0 {
+  background-color: transparent;
+  height: auto;
+  left: 188px;
+  letter-spacing: 0.16px;
+  line-height: 24px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 796px;
+  width: 1075px;
+}
+.submit-cv .flex-col-b4Oxxg {
+  align-items: flex-start;
+  align-self: flex-end;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  height: auto;
+  justify-content: flex-start;
+  min-height: 285px;
+  position: relative;
+  width: 164px;
+}
+.submit-cv .flex-row-9Ysbng {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 22px;
+  justify-content: flex-start;
+  margin-left: 6.0px;
+  min-width: 560px;
+  position: relative;
+  width: auto;
+}
+.submit-cv .flex-row-C61RwL {
+  align-items: center;
+  align-self: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 57px;
+  justify-content: flex-start;
+  margin-right: 60.0px;
+  min-width: 1622px;
+  position: relative;
+  width: auto;
+}
+.submit-cv .flex-row-a9bgBH {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 22px;
+  justify-content: flex-start;
+  margin-left: 8.0px;
+  min-width: 560px;
+  position: relative;
+  width: auto;
+}
+.submit-cv .flex-row-iwetKY {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 22px;
+  justify-content: flex-start;
+  margin-left: 6.0px;
+  min-width: 560px;
+  position: relative;
+  width: auto;
+}
+.submit-cv .flex-row-j60mBE {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 80px;
+  justify-content: flex-start;
+  margin-top: 7px;
+  min-width: 603px;
+  position: relative;
+  width: auto;
+}
+.submit-cv .flex-row-u6FoRQ {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 22px;
+  justify-content: flex-start;
+  margin-left: 8.0px;
+  min-width: 560px;
+  position: relative;
+  width: auto;
+}
+.submit-cv .flex-row-xB9Sqx {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 22px;
+  justify-content: flex-start;
+  margin-left: 6.0px;
+  min-width: 560px;
+  position: relative;
+  width: auto;
+}
+.submit-cv .footer-4eduM0 {
+  background-color: transparent;
+  height: 447px;
+  left: 0px;
+  position: absolute;
+  top: 1839px;
+  width: 1810px;
+}
+.submit-cv .fred-LYvpHm {
+  background-color: transparent;
+  height: 22px;
+  left: 20px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 29px;
+  width: 95px;
+}
+.submit-cv .group-1-dXBp89 {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 21px;
+  justify-content: flex-start;
+  margin-bottom: 0.38px;
+  margin-left: 815px;
+  min-width: 553px;
+  position: relative;
+  width: auto;
+}
+.submit-cv .group-10-4eduM0 {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 324px;
+  justify-content: flex-start;
+  left: 782px;
+  min-width: 314px;
+  position: absolute;
+  top: 193px;
+  width: auto;
+}
+.submit-cv .group-4-tybepC {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 21px;
+  justify-content: flex-start;
+  left: 811px;
+  min-width: 656px;
+  position: absolute;
+  top: 91px;
+  width: auto;
+}
+.submit-cv .group-84UUSB {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 15px;
+  margin-top: 10px;
+  position: relative;
+  width: 149px;
+}
+.submit-cv .group-ecZ4dd {
+  align-self: flex-end;
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 6px;
+  margin-right: 1.56px;
+  margin-top: 1px;
+  position: relative;
+  width: 75px;
+}
+.submit-cv .home-RrLOcj {
+  background-color: transparent;
+  cursor: pointer;
+  flex-shrink: 1;
+  height: 21px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  min-height: 21px;
+  min-width: 56px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+.submit-cv .home-jmizPO {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 21px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  min-height: 21px;
+  min-width: 56px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+.submit-cv .husan-Jbhwdy {
+  background-color: transparent;
+  height: 22px;
+  left: 20px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 29px;
+  width: 95px;
+}
+.submit-cv .i-authorize-enn-r-opportunities-4eduM0 {
+  background-color: transparent;
+  height: 21px;
+  left: 312px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 1485px;
+  width: auto;
+}
+.submit-cv .imperial-busine-suite-400-27703-tybepC {
+  background-color: transparent;
+  height: auto;
+  left: 811px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 212px;
+  width: 201px;
+}
+.submit-cv .linkedin-tybepC {
+  background-color: transparent;
+  height: 32px;
+  left: 395px;
+  position: absolute;
+  top: 184px;
+  width: 32px;
+}
+.submit-cv .logo-dXBp89 {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 57px;
+  justify-content: flex-start;
+  min-width: 254px;
+  position: relative;
+  width: auto;
+}
+.submit-cv .logo-tybepC {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 57px;
+  justify-content: flex-start;
+  left: 345px;
+  min-width: 254px;
+  position: absolute;
+  top: 73px;
+  width: auto;
+}
+.submit-cv .month-IoEOg6 {
+  background-color: transparent;
+  height: 22px;
+  left: 20px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 29px;
+  width: auto;
+}
+.submit-cv .month-l2XF6o {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 80px;
+  margin-left: 21px;
+  position: relative;
+  width: 257px;
+}
+.submit-cv .name-4eduM0 {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: flex-start;
+  left: 275px;
+  min-height: 108px;
+  position: absolute;
+  top: 972px;
+  width: 606px;
+}
+.submit-cv .name-xxAb4D {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 22px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  min-height: 22px;
+  min-width: 95px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 95px;
+}
+.submit-cv .office-tybepC {
+  background-color: transparent;
+  height: auto;
+  left: 811px;
+  letter-spacing: 0.64px;
+  line-height: 23px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 184px;
+  white-space: nowrap;
+  width: 257px;
+}
+.submit-cv .overlap-group-C61RwL {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 2286px;
+  margin-top: 28px;
+  position: relative;
+  width: 1810px;
+}
+.submit-cv .overlap-group1-9Ysbng {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 80px;
+  margin-right: 6.0px;
+  margin-top: 6px;
+  position: relative;
+  width: 600px;
+}
+.submit-cv .overlap-group2-iwetKY {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 80px;
+  margin-right: 6.0px;
+  margin-top: 6px;
+  position: relative;
+  width: 600px;
+}
+.submit-cv .overlap-group3-xB9Sqx {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 80px;
+  margin-right: 6.0px;
+  margin-top: 6px;
+  position: relative;
+  width: 600px;
+}
+.submit-cv .phone-4eduM0 {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: flex-start;
+  left: 275px;
+  min-height: 108px;
+  position: absolute;
+  top: 1116px;
+  width: 604px;
+}
+.submit-cv .phone-input-Cx23jM {
+  background-color: var(--sonic-silver);
+  border-radius: 8px;
+  height: 80px;
+  left: 0px;
+  mix-blend-mode: normal;
+  opacity: 0.3;
+  position: absolute;
+  top: 0px;
+  width: 166px;
+}
+.submit-cv .phone-input-I5xRX4 {
+  background-color: var(--white);
+  border-radius: 8px;
+  height: 80px;
+  left: 0px;
+  mix-blend-mode: normal;
+  opacity: 0.3;
+  position: absolute;
+  top: 0px;
+  width: 190px;
+}
+.submit-cv .phone-input-IoEOg6 {
+  background-color: var(--white);
+  border-radius: 8px;
+  height: 80px;
+  left: 0px;
+  mix-blend-mode: normal;
+  opacity: 0.3;
+  position: absolute;
+  top: 0px;
+  width: 255px;
+}
+.submit-cv .phone-input-Jbhwdy {
+  background-color: var(--white);
+  border-radius: 8px;
+  height: 80px;
+  left: 0px;
+  mix-blend-mode: normal;
+  opacity: 0.3;
+  position: absolute;
+  top: 0px;
+  width: 600px;
+}
+.submit-cv .phone-input-LYvpHm {
+  background-color: var(--white);
+  border-radius: 8px;
+  height: 80px;
+  left: 0px;
+  mix-blend-mode: normal;
+  opacity: 0.3;
+  position: absolute;
+  top: 0px;
+  width: 600px;
+}
+.submit-cv .phone-input-MVeBze {
+  background-color: var(--white);
+  border-radius: 8px;
+  height: 80px;
+  left: 0px;
+  mix-blend-mode: normal;
+  opacity: 0.3;
+  position: absolute;
+  top: 0px;
+  width: 600px;
+}
+.submit-cv .phone-input-a9bgBH {
+  background-color: var(--white);
+  border-radius: 8px;
+  flex-shrink: 1;
+  height: 80px;
+  margin-right: 4.0px;
+  margin-top: 6px;
+  mix-blend-mode: normal;
+  opacity: 0.3;
+  position: relative;
+  width: 600px;
+}
+.submit-cv .phone-input-hNeJVI {
+  background-color: var(--white);
+  border-radius: 8px;
+  height: 80px;
+  left: 0px;
+  mix-blend-mode: normal;
+  opacity: 0.3;
+  position: absolute;
+  top: 0px;
+  width: 110px;
+}
+.submit-cv .phone-input-u6FoRQ {
+  background-color: var(--white);
+  border-radius: 8px;
+  flex-shrink: 1;
+  height: 80px;
+  margin-right: 4.0px;
+  margin-top: 6px;
+  mix-blend-mode: normal;
+  opacity: 0.3;
+  position: relative;
+  width: 600px;
+}
+.submit-cv .phone-tybepC {
+  background-color: transparent;
+  height: auto;
+  left: 1076px;
+  letter-spacing: 0.64px;
+  line-height: 23px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 184px;
+  white-space: nowrap;
+  width: 257px;
+}
+.submit-cv .phone-xWUH5k {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 22px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  min-height: 22px;
+  min-width: 95px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 95px;
+}
+.submit-cv .powered-by-84UUSB {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 9px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  min-height: 9px;
+  min-width: 124px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 124px;
+}
+.submit-cv .powered-by-tybepC {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: flex-start;
+  left: 1306px;
+  min-height: 42px;
+  position: absolute;
+  top: 360px;
+  width: 151px;
+}
+.submit-cv .rectangle-13-tybepC {
+  background-color: var(--eerie-black);
+  height: 447px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 0px;
+  width: 1800px;
+}
+.submit-cv .rectangle-29-Tsi9ls {
+  background-color: var(--fern);
+  border-radius: 10px;
+  height: 50px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 0px;
+  width: 50px;
+}
+.submit-cv .rectangle-3-4eduM0 {
+  background-color: var(--mystic);
+  height: 720px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 0px;
+  width: 1800px;
+}
+.submit-cv .rectangle-3-BJQsbv {
+  background-color: var(--white);
+  height: 760px;
+  left: 215px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 916px;
+  width: 1370px;
+}
+.submit-cv .rectangle-5-LAz7FY {
+  background-color: var(--fern);
+  border-radius: 10px;
+  height: 70px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 0px;
+  width: 190px;
+}
+.submit-cv .rectangle-9-4eduM0 {
+  background-color: var(--white-lilac);
+  height: 2286px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 0px;
+  width: 1800px;
+}
+.submit-cv .required-LuYzm0 {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 22px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-left: 370px;
+  min-height: 22px;
+  min-width: 95px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 95px;
+}
+.submit-cv .required-XtHLXh {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 22px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-left: 113px;
+  min-height: 22px;
+  min-width: 95px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 95px;
+}
+.submit-cv .required-xWUH5k {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 22px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-left: 370px;
+  min-height: 22px;
+  min-width: 95px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 95px;
+}
+.submit-cv .required-xkKkOl {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 22px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-left: 370px;
+  min-height: 22px;
+  min-width: 95px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 95px;
+}
+.submit-cv .required-xxAb4D {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 22px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-left: 370px;
+  min-height: 22px;
+  min-width: 95px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 95px;
+}
+.submit-cv .scroll-up-tybepC {
+  background-color: transparent;
+  cursor: pointer;
+  height: 50px;
+  left: 1619px;
+  position: absolute;
+  top: 199px;
+  width: 50px;
+}
+.submit-cv .select-file-MVeBze {
+  background-color: transparent;
+  height: 22px;
+  left: 36px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 29px;
+  width: 95px;
+}
+.submit-cv .services-RrLOcj {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 21px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-left: 39px;
+  min-height: 21px;
+  min-width: 73px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+.submit-cv .services-jmizPO {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 21px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-left: 39px;
+  min-height: 21px;
+  min-width: 73px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+.submit-cv .submit-cv-4eduM0 {
+  background-color: transparent;
+  height: 70px;
+  left: 1335px;
+  position: absolute;
+  top: 1460px;
+  width: 192px;
+}
+.submit-cv .submit-your-cv-LAz7FY {
+  background-color: transparent;
+  height: auto;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 25px;
+  width: auto;
+}
+.submit-cv .surname-4eduM0 {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: flex-start;
+  left: 925px;
+  min-height: 108px;
+  position: absolute;
+  top: 972px;
+  width: 606px;
+}
+.submit-cv .surname-LuYzm0 {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 22px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  min-height: 22px;
+  min-width: 95px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 95px;
+}
+.submit-cv .twitter-tybepC {
+  background-color: transparent;
+  height: 32px;
+  left: 442px;
+  position: absolute;
+  top: 184px;
+  width: 32px;
+}
+.submit-cv .upload-cv-allow-es-pdf-doc-docx-XtHLXh {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 22px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  min-height: 22px;
+  min-width: 352px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 352px;
+}
+.submit-cv .vector-2-tybepC {
+  background-color: transparent;
+  height: 1px;
+  left: 345px;
+  position: absolute;
+  top: 315px;
+  width: 1110px;
+}
+.submit-cv .vector-38CLwp {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 138px;
+  margin-top: 8px;
+  mix-blend-mode: normal;
+  position: relative;
+  width: 138px;
+}
+.submit-cv .vector-88Uxjo {
+  background-color: transparent;
+  height: 32px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 0px;
+  width: 32px;
+}
+.submit-cv .vector-CXaWly {
+  background-color: transparent;
+  height: 32px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 0px;
+  width: 32px;
+}
+.submit-cv .vector-DO315T {
+  background-color: transparent;
+  height: 32px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 0px;
+  width: 32px;
+}
+.submit-cv .vector-DY5MkX {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 29px;
+  margin-left: 2px;
+  margin-top: 0.0px;
+  mix-blend-mode: normal;
+  position: relative;
+  width: 68px;
+}
+.submit-cv .vector-LAz7FY {
+  background-color: transparent;
+  height: 14px;
+  left: 152px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 28px;
+  width: 16px;
+}
+.submit-cv .vector-RR2zGD {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 29px;
+  margin-left: 2px;
+  margin-top: 0.0px;
+  mix-blend-mode: normal;
+  position: relative;
+  width: 68px;
+}
+.submit-cv .vector-TZBXyJ {
+  align-self: flex-start;
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 58px;
+  margin-left: 0px;
+  margin-top: -0.31px;
+  mix-blend-mode: normal;
+  position: relative;
+  width: 58px;
+}
+.submit-cv .vector-ThCO5V {
+  align-self: flex-start;
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 58px;
+  margin-left: 0px;
+  margin-top: -0.31px;
+  mix-blend-mode: normal;
+  position: relative;
+  width: 58px;
+}
+.submit-cv .vector-Tsi9ls {
+  background-color: transparent;
+  height: 20px;
+  left: 20px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 15px;
+  width: 11px;
+}
+.submit-cv .vector-XvwHTr {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 26px;
+  margin-left: 16px;
+  margin-top: 2.11px;
+  mix-blend-mode: normal;
+  position: relative;
+  width: 110px;
+}
+.submit-cv .vector-b0AvmW {
+  background-color: transparent;
+  height: 14px;
+  left: 9px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 8px;
+  width: 16px;
+}
+.submit-cv .vector-b4Oxxg {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 137px;
+  margin-left: 12px;
+  mix-blend-mode: normal;
+  position: relative;
+  width: 138px;
+}
+.submit-cv .vector-ceoAxg {
+  background-color: transparent;
+  height: 15px;
+  left: 6px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 9px;
+  width: 21px;
+}
+.submit-cv .vector-dO13K4 {
+  align-self: flex-end;
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 139px;
+  mix-blend-mode: normal;
+  position: relative;
+  width: 136px;
+}
+.submit-cv .vector-hBZExU {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 26px;
+  margin-left: 16px;
+  margin-top: 2.11px;
+  mix-blend-mode: normal;
+  position: relative;
+  width: 110px;
+}
+.submit-cv .vector-rEOUr9 {
+  background-color: transparent;
+  height: 22px;
+  left: 10px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 6px;
+  width: 11px;
+}
+.submit-cv .x2021-ennavatech-tybepC {
+  background-color: transparent;
+  height: auto;
+  left: 345px;
+  letter-spacing: 0.64px;
+  line-height: 23px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 369px;
+  white-space: nowrap;
+  width: 257px;
+}
+.submit-cv .x984-363-9261-508-410-7706-tybepC {
+  background-color: transparent;
+  height: auto;
+  left: 1076px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 212px;
+  width: 201px;
+}
+.submit-cv .year-I5xRX4 {
+  background-color: transparent;
+  height: 22px;
+  left: 20px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 29px;
+  width: auto;
+}
+.submit-cv .year-l2XF6o {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 80px;
+  position: relative;
+  width: 192px;
+}
+.submit-cv .your-career-4eduM0 {
+  background-color: transparent;
+  height: auto;
+  left: 160px;
+  letter-spacing: 1.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 104px;
+  width: 742px;
+}
+.submit-cv .your-career-RrLOcj {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 21px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-left: 39px;
+  min-height: 21px;
+  min-width: 101px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+.submit-cv .your-career-jmizPO {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 21px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-left: 39px;
+  min-height: 21px;
+  min-width: 101px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+.footer-C61RwLL {
+    background-color: transparent;
+    height: 447px;
+    left: 0px;
+    position: absolute;
+    top: 2226px;
+    width: 100%;
+}
